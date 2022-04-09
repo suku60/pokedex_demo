@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-import { EFFects } from '@react-three/drei'
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { BloomPass } from "three/examples/jsm/postprocessing/BloomPass";
 import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass";
 
@@ -17,7 +17,7 @@ let camera, scene, renderer;
 const loader = new GLTFLoader();
 
 export function init() {
-
+    
     camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
     // in camera...
     // z dictates position relative to the camera (like a straight line between the model and your eyes)
@@ -50,11 +50,11 @@ export function init() {
             model.position.y = .2;
             // x dictates the horizontal position
             model.position.x = .5;
-
+            
             gsap.to(camera.position, {
                 z: .6,
-                x: .15,
-                y: .05,
+                x: .5,
+                y: .2,
                 duration: 1,
                 ease: "back.out(2.8)"
             } )
@@ -64,7 +64,7 @@ export function init() {
             } )
             gsap.to(model.rotation, {
                 x: 0.1,
-                y:-1,
+                y:-0.5,
                 duration: 1,
                 delay: 1
             } )
@@ -76,10 +76,10 @@ export function init() {
                 z: 1.55
             } )
             
-
-
+            
+            
             scene.add( model );
-    
+            
         },
         // called while loading is progressing
         function ( xhr ) {
@@ -91,7 +91,7 @@ export function init() {
         function ( error ) {
     
             console.log( 'An error happened' );
-    
+            
         }
     );
 
@@ -111,7 +111,9 @@ export function init() {
 // animation
 
 function animation() {
-
-	renderer.render( scene, camera );
-
+    
+    renderer.render( scene, camera );
+    
 }
+
+// const composer = new EffectComposer( renderer );

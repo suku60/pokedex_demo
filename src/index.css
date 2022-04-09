@@ -22,14 +22,14 @@ body {
 
   border-radius: 50%;
   
-  top: 32.5vh;
-  left: 68.5vw;
+  top: 41vh;
+  left: 68.9vw;
   
   position: absolute;
   z-index: -2;
 
-  height: 2em;
-  width: 2em;
+  height: 3em;
+  width: 3.6em;
 
   transform: matrix(4, 1, -4, 1, 10, 80);
 }
@@ -37,8 +37,9 @@ body {
 .pokemon_screen {
   background-color: rgba(255, 0, 0, 0.308);
 
-  height: 32vh;
-  width: 18vw;
+
+  height: 23em;
+  width: 23em;
 
   position: absolute;
   
@@ -54,17 +55,41 @@ canvas {
   position: fixed;
   z-index: -1;
   
-  top: 5%;
-  left: 0%;
+  /* top: 5%; */
+  /* left: 0%; */
+/* transform: scale(.5);   */
 
-  height: 30vh !important;
-  width: 30vw !important;
+  height:70vh !important;
+  width: 70vw !important;
 
-  background-color: #0C92F5;
+  /* position: absolute; */
+  
+  top: 5vh;
+  left: 30.5vw;
 
+  /* ANIMATIONS WORK ON CANVAS! */
+  /* animation: prueba 9s infinite; */
+  
+
+  /* background-color: #0C92F5; */
+background-color: transparent;
 
 
 }
 
 
 /* glitch animation */
+
+.effects_class {
+  opacity: 5%;
+
+}
+
+#animation_try {
+  animation: prueba 5s infinite;
+}
+
+@keyframes prueba {
+  from{transform: rotateZ(0deg)}
+  to{transform: rotateZ(360deg);}
+}
