@@ -10,7 +10,7 @@ canvas {
   /* background-color: #0C92F5; */
   
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   /* top: 5%; */
   /* left: 0%; */
   /* transform: scale(.5);   */
@@ -23,6 +23,7 @@ canvas {
 
   /* ANIMATIONS WORK ON CANVAS! */
   animation: pokemon_glitch 9s 2.5s infinite,
+  z-index_try 4s normal,
              appering_opacity 15s normal;
 }
 
@@ -46,19 +47,31 @@ canvas {
   100% { top: 5vh;left: 30vw; }
 }
 
+@keyframes z-index_try {
+  from{z-index: -4;}
+  top{z-index: -2;}
+}
 body {
   color: black;
 }
 
 .pokedex_box {
+  background-color: #199AFA;
+
+  height: 96.5vh;
+  width: 98.3vw;
   padding: 1em;
- 
+
+  position: absolute;
+  z-index: -1;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* POKEDEX SCREEN ELEMENTS */
 .pokemon_background {
 
   background: linear-gradient(hsl(270, 96%, 54%), #199AFA);
@@ -88,16 +101,16 @@ body {
     opacity: 0;
   }
   10% {
-    opacity: .1;
+    opacity: .0;
   }
   27% {
-    opacity: .15;
+    opacity: .05;
   }
   30% {
-    opacity: .35;
+    opacity: .05;
   }
   35% {
-    opacity: 1;
+    opacity: .7;
   }
   52% {
     opacity: .8;
@@ -122,6 +135,7 @@ body {
   }
 }
 
+
 .pokemon_screen {
   background-color: hsla(270, 96%, 54%, 0.1);
 
@@ -134,11 +148,53 @@ body {
   top: 20vh;
   left: 61.5vw;
 
+}
+
+.static {
+  /* background-color: hsla(270, 96%, 54%, 0.1); */
+  background: linear-gradient( hsla(270, 96%, 54%, 0),hsl(270, 96%, 54%),hsla(270, 96%, 54%, 0));
+
+  z-index: -2;
+
+  top: 27vh;
+
+  height: 15em;
+
+  animation: appering_opacity 2.5s normal;
+}
+.pokemon_screen_top, .pokemon_screen_bottom  {
+  background-color: hsl(270, 96%, 24%);
+
+
+  height: 10em;
+  width: 25em;
+
+  position: absolute;
+  z-index: 2;
+  
+  /* 20.5 initial */
+  top: 4.5vh;
+  left: 60.7vw;
+
+  border-radius: 30% 50% 5% 5%;
+
   border: #199AFA;
   border-width: 3em;
 
 }
 
+.pokemon_screen_bottom {
+/* 43vh initial */
+  top: 58vh;
+  border-radius:5% 5% 33% 59%;
+  animation: opening_container_bottom 3s normal;
+
+
+}
+.pokemon_screen_top {
+
+  animation: opening_container_top 2.9s normal;
+}
 /* glitch animation */
 
 .effects_class {
@@ -149,20 +205,18 @@ body {
 #animationGlitchSquare1 {
   color: #fff;
   animation: glitch1 2.5s infinite,
-             open_up 4s normal;
+             screen_opening 4s normal;
 }
 #animationGlitchSquare2 {
   color: #67f3da;
   animation: glitch2 2.5s 2.5s infinite,
-             open_up 4s normal;
+             screen_opening 4s normal;
 }
 #animationGlitchSquare3 {
   color: #f16f6f57;
   animation: glitch3 2.5s 2.5s infinite,
-             open_up 4s normal;
+             screen_opening 4s normal;
 }
-
-
 @keyframes glitch1 {
   0% {
     transform: none;
@@ -217,7 +271,6 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes glitch2 {
   0% {
     transform: none;
@@ -272,7 +325,6 @@ body {
     opacity: 0.25;
   }
 }
-
 @keyframes glitch3 {
   0% {
     transform: none;
@@ -330,18 +382,18 @@ body {
 
 /* animation: openning pokemon screen */
 
-@keyframes open_up {
+@keyframes screen_opening {
   0% {
     transform: scaleY(0);
   }
   7% {
-    transform: scaleY(0.65);
+    transform: scaleY(0.15);
   }
   10% {
-    transform: scaleY(0.6);
+    transform: scaleY(0.1);
   }
   27% {
-    transform: scaleY(0.65);
+    transform: scaleY(0.15);
   }
   30% {
   }
@@ -369,4 +421,62 @@ body {
   100% {
     transform: scaleY(1);
   }
+}
+
+@keyframes opening_container_bottom {
+  0% {
+top: 42vh  }
+  7% {
+top: 43vh  }
+  10% {
+top: 44vh  }
+  27% {
+top: 47vh  }
+  30% {
+top: 48vh  }
+  35% {
+top: 43vh  }
+  52% {
+top: 49vh  }
+  55% {
+top: 50vh  }
+  50% {
+top: 51vh  }
+  72% {
+top: 55vh  }
+  75% {
+top: 54vh  }
+  80% {
+top: 56vh  }
+  100% {
+top: 58vh  }
+}
+
+@keyframes opening_container_top {
+  0% {
+top: 20.5vh  }
+  7% {
+top: 21vh  }
+  10% {
+top: 19.2vh  }
+  27% {
+top: 19vh  }
+  30% {
+top: 16.6vh  }
+  35% {
+top: 17vh  }
+  52% {
+top: 14.7vh  }
+  55% {
+top: 14.1vh  }
+  50% {
+top: 13.2vh  }
+  72% {
+top: 13vh  }
+  75% {
+top: 11.5vh  }
+  80% {
+top: 10.7vh  }
+  100% {
+top: 4.5vh  }
 }
