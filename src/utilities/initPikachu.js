@@ -30,7 +30,7 @@ export function init() {
     
     scene = new THREE.Scene();
     
-    const light = new THREE.AmbientLight( 0xffffff, 1 );
+    const light = new THREE.AmbientLight( 0xffffff, 1.2 );
     scene.add(light);
     
     // here we are loading the gltf model
@@ -55,9 +55,9 @@ export function init() {
                 z: .6,
                 x: .5,
                 y: .2,
-                duration: 1,
-                ease: "back.out(2.8)"
-            } )
+                duration: 3,
+                ease: "expo.out"
+             } )
             gsap.to(camera.rotation, {
                 z: 0,
                 duration: 1,

@@ -3,6 +3,48 @@
   padding: 0%;
 }
 
+
+/* we're placing canvas (pikachu) at z-indez -1 so we can have the info over him */
+canvas {
+  background-color: transparent;
+  /* background-color: #0C92F5; */
+  
+  position: fixed;
+  z-index: -1;
+  /* top: 5%; */
+  /* left: 0%; */
+  /* transform: scale(.5);   */
+  height:70vh !important;
+  width: 70vw !important;
+
+  /* position: absolute; */
+  top: 5vh;
+  left: 30.5vw;
+
+  /* ANIMATIONS WORK ON CANVAS! */
+  animation: pokemon_glitch 9s 2.5s infinite;
+}
+
+/* pokemon animation */
+/* 
+#animationGlitch1 {
+  animation: pokemon_glitch 9s 2.5s infinite;
+
+
+} */
+
+@keyframes pokemon_glitch {
+  0% { top: 4.95vh; left: 30.2vw;  }
+  20% { top: 5.1vh;left: 30.4vw; }
+  21% { top: 5vh;left: 30.5vw; }
+  25% { top: 5.05vh; left: 30.4vw;  }
+  31% { top: 5vh; left: 30.2vw;  }
+  64% { top: 4.9vh;left: 30vw; }
+  65% { top: 5vh;left: 30.1vw; }
+  88% { top: 5.05vh; }
+  100% { top: 5vh;left: 30vw; }
+}
+
 body {
   color: black;
 }
@@ -18,7 +60,7 @@ body {
 
 .pokemon_background {
 
-  background: linear-gradient(#8819FA, #199AFA);
+  background: linear-gradient(hsl(270, 96%, 54%), #199AFA);
 
   border-radius: 50%;
   
@@ -32,10 +74,11 @@ body {
   width: 3.6em;
 
   transform: matrix(4, 1, -4, 1, 10, 80);
+  
 }
 
 .pokemon_screen {
-  background-color: rgba(255, 0, 0, 0.308);
+  background-color: hsla(270, 96%, 54%, 0.1);
 
 
   height: 23em;
@@ -46,37 +89,10 @@ body {
   top: 20vh;
   left: 61.5vw;
 
+  border: #199AFA;
+  border-width: 3em;
 
 }
-
-
-/* we're placing canvas (pikachu) at z-indez -1 so we can have the info over him */
-canvas {
-  position: fixed;
-  z-index: -1;
-  
-  /* top: 5%; */
-  /* left: 0%; */
-/* transform: scale(.5);   */
-
-  height:70vh !important;
-  width: 70vw !important;
-
-  /* position: absolute; */
-  
-  top: 5vh;
-  left: 30.5vw;
-
-  /* ANIMATIONS WORK ON CANVAS! */
-  /* animation: prueba 9s infinite; */
-  
-
-  /* background-color: #0C92F5; */
-background-color: transparent;
-
-
-}
-
 
 /* glitch animation */
 
@@ -85,11 +101,227 @@ background-color: transparent;
 
 }
 
-#animation_try {
-  animation: prueba 5s infinite;
+#animationGlitchSquare1 {
+  color: #fff;
+  animation: glitch1 2.5s infinite,
+             open_up 2s normal;
+}
+#animationGlitchSquare2 {
+  color: #67f3da;
+  animation: glitch2 2.5s 2.5s infinite,
+             open_up 2s normal;
+}
+#animationGlitchSquare3 {
+  color: #f16f6f57;
+  animation: glitch3 2.5s 2.5s infinite,
+             open_up 2s normal;
 }
 
-@keyframes prueba {
-  from{transform: rotateZ(0deg)}
-  to{transform: rotateZ(360deg);}
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+/* animation: openning pokemon screen */
+
+@keyframes open_up {
+  0% {
+    transform: scaleY(0);
+  }
+  7% {
+    transform: scaleY(0.65);
+  }
+  10% {
+    transform: scaleY(0.6);
+  }
+  27% {
+    transform: scaleY(0.65);
+  }
+  30% {
+  }
+  35% {
+    transform: scaleY(0.7);
+  }
+  52% {
+    transform: none;
+  }
+  55% {
+    transform: scaleY(0.8);
+  }
+  50% {
+    transform: scaleY(0.85);
+  }
+  72% {
+    transform: scaleY(0.9);
+  }
+  75% {
+    transform: scaleY(0.91);
+  }
+  80% {
+    transform: scaleY(.95);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
