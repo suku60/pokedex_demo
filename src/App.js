@@ -11,6 +11,10 @@ function App() {
   return (
     <div className="App">
       <div className="pokedex_box">
+          <div className="info_container">
+            
+          </div>
+          
           <div className="pokemon_container_top">
             <div className="pokemon_ball_border"></div> 
               <div className="screen_ball ball_top ball_top_left">

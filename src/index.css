@@ -55,6 +55,9 @@ canvas {
 }
 body {
   color: black;
+  
+  background: 
+			radial-gradient(hsla(270, 96%, 54%, 0.8), hsl(0, 0%, 0%, .8), hsl(0, 0%, 0%, .8)) 0 0/ .5em .5em;
 }
 
 .pokedex_box {
@@ -190,15 +193,17 @@ body {
 }
 
 .pokemon_container_top, .pokemon_container_bottom  {
-  background:
+  /* background:
   linear-gradient(27deg, hsl(270, 82%, 7%)  5px, transparent 5px) 0 5px,
   linear-gradient(207deg, hsl(270, 82%, 7%) 5px, transparent 5px) 10px 0px,
   linear-gradient(27deg, hsl(270, 83%, 13%) 5px, transparent 5px) 0px 10px,
   linear-gradient(207deg, hsl(270, 83%, 13%) 5px, transparent 5px) 10px 5px,
   linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-  linear-gradient(#1d1d1d 25%, hsl(270, 92%, 3%) 25%, hsl(270, 92%, 3%) 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  background-color: black;
-  background-size: 20px 20px;
+  linear-gradient(#1d1d1d 25%, hsl(270, 92%, 3%) 25%, hsl(270, 92%, 3%) 50%, transparent 50%, transparent 75%, #242424 75%, #242424); */
+  background-color: rgb(255, 0, 0);
+
+  background: 
+			radial-gradient(rgb(240, 0, 0), black, black) 0 0/ .5em .5em;
 
   height: 10em;
   width: 25em;
@@ -308,9 +313,6 @@ body {
 
 .ball_circle {
   background-color: hsl(13, 100%, 57%);
-  cursor: pointer;
-
-  z-index: 4 !important;
 
 
   
@@ -332,7 +334,22 @@ body {
 
 }
 
+/* INFO CONTAINER */
 
+.info_container {
+  background-color: white;
+
+
+  height: 23em;
+  width: 50em;
+
+  position: absolute;
+  z-index: -4;
+  
+  top: 27vh;
+  left: 14vw;
+
+}
 
 /* glitch animation */
 
