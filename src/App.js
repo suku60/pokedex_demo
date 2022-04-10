@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <div className="pokedex_box">
-          <div className="info_container">
+      <div className="info_container" id="animationInfoDisplay">
             
-          </div>
+            </div>
           
           <div className="pokemon_container_top">
             <div className="pokemon_ball_border"></div> 
