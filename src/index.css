@@ -21,6 +21,8 @@ canvas {
   top: 5vh;
   left: 30.5vw;
 
+  z-index: -1;
+
   /* ANIMATIONS WORK ON CANVAS! */
   animation: pokemon_glitch 9s 2.5s infinite,
   z-index_try 4s normal,
@@ -56,7 +58,7 @@ body {
 }
 
 .pokedex_box {
-  background-color: hsl(206, 96%, 94%);
+  background-color: transparent;
 
   height: 96.5vh;
   width: 98.3vw;
@@ -150,6 +152,7 @@ body {
   width: 23em;
 
   position: absolute;
+  z-index: -4;
   
   top: 20vh;
   left: 61.5vw;
@@ -159,7 +162,7 @@ body {
   /* background-color: hsla(270, 96%, 54%, 0.1); */
   background: linear-gradient( hsla(270, 96%, 54%, 0),hsl(270, 96%, 54%, 0.3),hsla(270, 96%, 54%, 0));
 
-  z-index: -2;
+  z-index: -3;
 
   top: 28vh;
 
@@ -250,6 +253,7 @@ body {
 }
 
 .screen_ball {
+  cursor: pointer;
   background-color: black;
   height: 6em;
   width: 6em;
@@ -303,12 +307,18 @@ body {
 }
 
 .ball_circle {
-  background-color: #FF410D;
+  background-color: hsl(13, 100%, 57%);
+  cursor: pointer;
+
+  z-index: 4 !important;
+
+
   
-  background: linear-gradient(hsla(13, 96%, 94%, .1),hsl(13, 100%, 63%, .6),hsl(13, 100%, 53%, .7),hsl(13, 100%, 53%, .8),#FF410D,#FF410D);
+  /* possible degradated background... */
+  /* background: linear-gradient(hsla(13, 96%, 94%, .1),hsl(13, 100%, 63%, .6),hsl(13, 100%, 53%, .7),hsl(13, 100%, 53%, .8),#FF410D,#FF410D); */
   
 
-  margin-block: 1em;
+  margin-block: .6em;
 
   height: 3em;
   width: 3em;
@@ -316,7 +326,8 @@ body {
 }
 
 .background_rotation {
-  background: linear-gradient(#FF410D,#FF410D,hsl(13, 100%, 53%, .8),hsl(13, 100%, 53%, .7),hsl(13, 100%, 56%, .6),hsla(13, 96%, 94%, .1));
+  /* possible degradated background... */
+  /* background: linear-gradient(#FF410D,#FF410D,hsl(13, 100%, 53%, .8),hsl(13, 100%, 53%, .7),hsl(13, 100%, 56%, .6),hsla(13, 96%, 94%, .1)); */
   
 
 }
