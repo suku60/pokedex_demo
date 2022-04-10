@@ -6,6 +6,7 @@ import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass";
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import gsap from 'gsap';
+import { RedFormat } from 'three';
 
 // init
 
@@ -68,6 +69,18 @@ export function init() {
                 duration: 1,
                 delay: 1
             } )
+            gsap.to(model.rotation, {
+                x: 0.1,
+                y:-0.26,
+                duration: 1,
+                delay: 6
+            } )
+            gsap.to(model.position, {
+                x: .66,
+                y: .2,
+                duration: 1,
+                delay: 6
+            } )
             gsap.to(model.scale, {
                 delay: 2,
                 duration: 1,
@@ -75,7 +88,6 @@ export function init() {
                 y: 1.55,
                 z: 1.55
             } )
-            
             
             
             scene.add( model );
