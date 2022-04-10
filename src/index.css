@@ -22,7 +22,8 @@ canvas {
   left: 30.5vw;
 
   /* ANIMATIONS WORK ON CANVAS! */
-  animation: pokemon_glitch 9s 2.5s infinite;
+  animation: pokemon_glitch 9s 2.5s infinite,
+             appering_opacity 15s normal;
 }
 
 /* pokemon animation */
@@ -74,7 +75,51 @@ body {
   width: 3.6em;
 
   transform: matrix(4, 1, -4, 1, 10, 80);
+
+  animation: appering_opacity 2.5s normal;
   
+}
+
+@keyframes appering_opacity {
+  0% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  27% {
+    opacity: .15;
+  }
+  30% {
+    opacity: .35;
+  }
+  35% {
+    opacity: 1;
+  }
+  52% {
+    opacity: .8;
+  }
+  55% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  72% {
+    opacity: .9;
+  }
+  75% {
+    opacity: .75;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .9;
+  }
 }
 
 .pokemon_screen {
@@ -104,17 +149,17 @@ body {
 #animationGlitchSquare1 {
   color: #fff;
   animation: glitch1 2.5s infinite,
-             open_up 2s normal;
+             open_up 4s normal;
 }
 #animationGlitchSquare2 {
   color: #67f3da;
   animation: glitch2 2.5s 2.5s infinite,
-             open_up 2s normal;
+             open_up 4s normal;
 }
 #animationGlitchSquare3 {
   color: #f16f6f57;
   animation: glitch3 2.5s 2.5s infinite,
-             open_up 2s normal;
+             open_up 4s normal;
 }
 
 
