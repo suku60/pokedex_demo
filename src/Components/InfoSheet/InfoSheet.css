@@ -1,6 +1,22 @@
 
 /* INFO CONTAINER */
+.info_box {
+    height: 100vh;
+    width: 100vw;
+}
 
+.info1 {
+    background-color: hsl(0, 100%, 50%, .3);
+
+}
+.info2 {
+    background-color: hsl(240, 100%, 50%, .3);
+    
+}
+.info3 {
+    background-color: hsl(120, 100%, 25%, .3);
+    
+}
 .info_container {
     background-color: hsl(291, 19%, 85%);
   

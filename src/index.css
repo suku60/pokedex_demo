@@ -204,11 +204,10 @@ background-size:16px 16px;}
   linear-gradient(207deg, hsl(270, 83%, 13%) 5px, transparent 5px) 10px 5px,
   linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
   linear-gradient(#1d1d1d 25%, hsl(270, 92%, 3%) 25%, hsl(270, 92%, 3%) 50%, transparent 50%, transparent 75%, #242424 75%, #242424); */
-  background-color: rgb(255, 0, 0);
 
-  background: 
-			radial-gradient(rgb(240, 0, 0), black, black) 0 0/ .5em .5em;
-
+  background-color:hsl(344, 100%, 55%, .6);
+  background-size:16px 16px;
+  
   height: 10em;
   width: 25em;
 
