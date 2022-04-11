@@ -1,5 +1,6 @@
 import { init } from "./utilities/initPikachu.js"
 import { useEffect } from "react";
+import InfoSheet from "./Components/InfoSheet/InfoSheet.jsx";
 
 function App() {
   
@@ -11,9 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className="pokedex_box">
-      <div className="info_container" id="animationInfoDisplay">
-            
-            </div>
+      <InfoSheet/>
           
           <div className="pokemon_container_top">
             <div className="pokemon_ball_border"></div> 

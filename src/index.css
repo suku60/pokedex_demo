@@ -56,9 +56,13 @@ canvas {
 body {
   color: black;
   
-  background: 
-			radial-gradient(hsla(270, 96%, 54%, 0.8), hsl(0, 0%, 0%, .8), hsl(0, 0%, 0%, .8)) 0 0/ .5em .5em;
-}
+  background:
+radial-gradient(hsl(0, 0%, 0%) 15%, transparent 8%) 0 0,
+radial-gradient(hsl(0, 0%, 0%) 15%, transparent 8%) 8px 8px,
+radial-gradient(hsla(0, 0%, 100%, 0.1) 15%, transparent 20%) 0 1px,
+radial-gradient(hsla(0, 0%, 100%, 0.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;}
 
 .pokedex_box {
   background-color: transparent;
